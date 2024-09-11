@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500;700&display=swap");
+
+/* Base */
+:root {
+  --clr-primary: #29a396;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background: #f4f4f4;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Menu */
+.menu {
+  width: 100%;
+  background: linear-gradient(to right, #0e0e0e 70%, #142d2a);
+  padding: 12px 0;
+  position: relative; /* Add this line */
+}
+
+.menu .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu .mobile-btn {
+  display: none;
+}
+
+.menu .logo img {
+  height: 50px;
+}
+
+.menu .nav {
+  display: flex;
+  list-style: none;
+}
+
+.menu .nav-item {
+  margin: 0 10px;
+}
+
+.menu .nav-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu .btn {
+  padding: 10px 20px;
+  background: var(--clr-primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu .btn:hover {
+  background: #1f8e74;
+}
+
+.menu.active .nav {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .menu .mobile-btn {
+    display: block;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .menu .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #142d2a;
+    width: 100%;
+  }
+
+  .menu .nav-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .menu .btn {
+    margin-top: 10px;
+  }
+}
+
+/* Header */
+.header {
+  background: #0e0e0e;
+  color: white;
+  padding: 50px 0;
+}
+
+.header .text {
+  max-width: 600px;
+}
+
+.header .text h1 {
+  font-size: 3em;
+}
+
+.header .text span {
+  color: var(--clr-primary);
+}
+
+.header .text .btn {
+  background: var(--clr-primary);
+}
+
+.header .visual img {
+  max-width: 100%;
+}
+
+/* Sections */
+.section {
+  padding: 50px 0;
+}
+
+.section .text {
+  text-align: center;
+}
+
+.section .text h2.primary {
+  font-size: 2.5em;
+}
+
+.section .text p {
+  margin: 20px 0;
+}
+
+.section .btn {
+  background: var(--clr-primary);
+}
+
+.section .btn:hover {
+  background: #1f8e74;
+}
+
+/* Trainer */
+.trainer {
+  text-align: center;
+}
+
+.trainer img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.trainer .btn-2 {
+  background: var(--clr-primary);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+/* Testimonial */
+.client {
+  text-align: center;
+}
+
+.client img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+/* Footer */
+.footer {
+  background: #0e0e0e;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
